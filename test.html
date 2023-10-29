@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="topnav">
+    <a href="/?password=%s">Home</a>
+    <a href="/kassa/producten/maken?password=5678">Product maken</a>
+    <a class="active" href="/kassa/producten/prijs?password=5678">Producten prijs</a>
+</div>
+
+<div>
+    <input placeholder="naam" id="naam" required>
+    <input placeholder="prijs" id="prijs" required>
+    <input placeholder="barcode" id="barcode" required>
+    <button onclick="f()">maak</button>
+</div>
+<script>
+    function f() {
+        var n = document.getElementById("naam")
+        var p = document.getElementById("prijs")
+        var b = document.getElementById("barcode")
+        window.location.assign("?naam="+n.value+"&prijs="+p.value+"&barcode="+b.value+"&password=5678")
+    }
+</script>
+<!-- http//localhost:8080/kassa/producten/maken -->
+</body>
+</html>
